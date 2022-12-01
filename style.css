@@ -1,0 +1,926 @@
+*{
+    max-width: 100vw;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Noto Sans TC','微軟正黑體','Microsoft JhengHei','Apple LiGothic Medium',sans-serif,'FontAwesome';
+}
+#menuCheck{
+    display: none;
+    z-index: -99999999999999;
+}
+.green_space{
+    max-width: 100vw;
+    height: 10px;
+    background-color: #006341;
+    z-index: 9999999767676769;
+}
+header{
+    z-index: 999999;
+    max-width: 100vw;
+    display: flex;
+    align-items: flex-end;
+    position: relative;
+    background-color: #F7F7F7;
+}
+header .logo img{
+    width: 5rem;
+}
+header .logo{
+    margin: .5rem;
+}
+nav ul li{
+    display: inline-block
+}
+.mobile_nav{
+    display: none;
+}
+header .utility_list ul{
+    position: absolute;
+    right: 0;
+    top: 0;
+    margin: 1rem;
+}
+header .utility_list ul li{
+    display: inline-block;
+}
+/* 漢堡選單 */
+#menuCheck{
+    width: 100%;
+    height: 100%;
+    margin-top: 15px;
+}
+.burger_icon{
+    display: none;
+    position:relative;
+    width: 2rem;
+    height: 1.5rem;
+    margin-bottom: 20px;
+    margin-right: .5rem;
+}
+.burger_icon span{
+    position:absolute;
+    display: block;
+    width: 100%;
+    height: 1px;
+    background-color: #005E37;
+}
+.burger_icon span:nth-child(1){
+    top: 0%;
+}
+.burger_icon span:nth-child(2){
+    top: 50%;
+}
+.burger_icon span:nth-child(3){
+    top: 100%;
+}
+/* @keyframes burger {
+    from {
+        height:0px
+    }
+
+    to {
+        height:500px
+    }
+} */
+/*  */
+.utility_list ul li{
+    margin: 0 1rem;
+}
+.utility_list ul li:nth-child(1)::before{
+    content: '';
+    display: inline-block;
+    width: 1.5rem;
+    height: 1.5rem;
+    vertical-align: bottom;
+   
+    background: url('https://www.starbucks.com.tw/objects/images/header_utility_list.svg');
+    background-position: 100% 0;
+    background-size: 400%;
+}
+.utility_list ul li:nth-child(2)::before{
+    content: '';
+    display: inline-block;
+    width: 1.5rem;
+    height: 1.5rem;
+    vertical-align: bottom;
+    background: url('https://www.starbucks.com.tw/objects/images/header_utility_list.svg');
+    background-position: 35% 100%;
+    background-size: 400%;
+}
+.utility_list ul li:nth-child(3) a::before{
+    content: '';
+    display: inline-block;
+    width: 1.5rem;
+    height: 1.5rem;
+    vertical-align: bottom;
+    background: url('https://www.starbucks.com.tw/objects/images/header_utility_list.svg');
+    background-position: 35% 100%;
+    background-size: 400%;
+    display: none;
+}
+nav ul li a{
+    text-decoration:none;
+    color: #000000;
+    font-weight: 600;
+    padding: 1rem;
+}
+.utility_list ul li a{
+    text-decoration:none;
+    color: #000000;
+    font-weight: 600;
+}
+.utility_list ul li{
+    list-style: none;
+}
+nav ul{
+    margin-left:3rem;
+    padding-bottom: 1rem;
+
+}
+
+/* 子項目 */
+.sub_menu{
+    z-index: 100;
+    width: 100vw;
+    display: flex;
+    justify-content: space-between;
+    display: none;
+    position: relative;
+}
+.menu_content_container{
+    width: 100vw;
+    background-color: #1E1E1E;
+    display: flex;
+    flex-wrap: wrap;
+    position: absolute;
+}
+.sub_menu span{
+    width: 30%;
+    background: url(https://www.starbucks.com.tw/objects/images/pattern_stars.png);
+}
+.sub_menu .menu_content{
+    margin: 2.5rem
+}
+.sub_menu .menu_content ul li{
+    list-style: none;
+    font-size: 1.2rem;
+    margin: .5rem 0;
+}
+
+.sub_menu .menu_content ul h3 a{
+    text-decoration: none;
+    color: #ffffff;
+}
+.sub_menu .menu_content ul li a{
+    text-decoration: none;
+    color: #BCBCBC;
+}
+.sub_menu .menu_content ul li:first-child{
+    font-weight: 700;
+}
+/* section content */
+.advertisement{
+    position: fixed;
+    z-index: 200000;
+    right: 5px;
+}
+.advertisement img{
+    display: block;
+    width: 7rem;
+    border-radius: 15px;
+    box-shadow: 0 5px 10px 3px #3333331a;
+}
+.banner{
+    position: relative;
+    margin: 3rem 0;
+
+}
+.banner img{
+    display: block;
+    width: 85%;
+    margin: auto;
+}
+.banner .text_block img{
+    position: absolute; 
+    top:0;
+    left: 7%;
+}
+
+.Cocoa_Oatmilk_Macchiato{
+    right: 43%;
+}
+.Brown_Sugar_Oatmilk_Iced_Shaken_Espresso{
+    right: 26%;
+}
+.Brown_Sugar_Cocoa_Oatmilk_Frappuccino_Blended_Beverage{
+    right: 9%;
+}
+.mobile-pay .img_block img{
+    width: 100%;
+}
+.mobile-pay{
+    width: 85%;
+    margin: auto;
+    position: relative;
+}
+.mobile-pay .text_block img{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+.mobile-pay a{
+    display: block;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.openpoint_rewards{
+    width:  85%;
+    margin: 3rem auto;
+}
+.online-redeem{
+    position: relative;
+}
+.online-redeem .img_block img{
+    display: block;
+    width: 85%;
+    margin: auto;
+}
+.online-redeem .text_block img{
+    position: absolute;
+    top: 10%;
+}
+.online-redeem a{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+}
+.reward{
+    width:  85vw;
+    height: 60vh;
+    margin: 3rem auto;
+    display: flex;
+}
+.star{
+    position: absolute;
+    top:2%;
+    right: 5%;
+}
+.reward .start_reward .img-block img{
+    display: block;
+    width: 70%;
+    margin: auto;
+}
+
+.start_reward{
+    width: 50%;
+    position:relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #1E3932;
+}
+.reward *{
+    color: #ffffff;
+    text-decoration: none;
+}
+.start_reward .text-block div{
+    text-align: center;
+    margin-top: 1rem;
+}
+.start_reward a{
+    display:inline-block;
+    border: 1px solid #ffffff;
+    border-radius: 20px;
+    padding: .5rem 1rem;
+    font-weight: 600;
+    margin: 0 1rem;
+}
+.start_reward h3{
+    font-size: 2.5rem;
+}
+
+.reward .goldreward img{
+    width: 100%;
+}
+.reward .goldreward{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    background-color: #00704A;
+}
+.reward .goldreward h3{
+    font-size: 2.5rem;
+    text-align: center;
+}
+.reward .goldreward p{
+    font-size: 1.3rem;
+    font-weight: 700;
+    margin-top: .5rem;
+}
+.reward .goldreward a{
+    display: inline-block;
+    border: 1px solid #ffffff;
+    padding: .5rem 1rem;
+    border-radius: 20px;
+    margin-top: 1rem;
+    text-align: center;
+}
+.reward .goldreward .text-block{
+    text-align: center;
+}
+.borrow_takeout{
+    width:  85vw;
+    display: flex;
+    margin: 3rem auto;
+
+}
+.borrow,
+.takeout{
+    width: 50%;
+}
+.borrow{
+    margin-right: 1rem;
+}
+.takeout{
+    margin-left: 1rem;
+}
+.borrow_takeout .img-block img{
+    display: block;
+    width: 100%;
+}
+.borrow_takeout .borrow .text-block{
+    background-color: #005E37;
+}
+.borrow_takeout .takeout .text-block{
+    background-color: #D4E9E2;
+}
+.borrow .text-block{
+    padding: 2rem;
+}
+.borrow,
+.borrow .text-block *{
+    color: #ffffff;
+    text-decoration: none;
+    text-align: center;
+    line-height: 1.5;
+}
+.borrow .text-block h3{
+    font-size: 2.5rem;
+}
+.borrow .text-block p{
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+.borrow .text-block a{
+    display: inline-block;
+    border: 1px solid #ffffff;
+    padding: .5rem 1rem;
+    border-radius: 20px;
+    margin-top: 1rem;
+    font-weight: 600;
+}
+
+.takeout .text-block{
+    padding: 2rem;
+}
+.takeout,
+.takeout .text-block *{
+    color: #000000;
+    text-decoration: none;
+    text-align: center;
+    line-height: 1.5;
+}
+.takeout .text-block h3{
+    font-size: 2.5rem;
+}
+.takeout .text-block p{
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+.takeout .text-block a{
+    display: inline-block;
+    border: 1px solid #000000;
+    padding: .5rem 1rem;
+    border-radius: 20px;
+    margin-top: 1rem;
+    font-weight: 700;
+}
+/* footer */
+footer{
+    background-color: #F0F0F0;
+    padding-bottom: 1rem;
+}
+
+footer .footer_top{
+    padding: 1rem 0 1rem 5rem;
+    border-bottom: 3px solid #ffffff;
+}
+footer .footer_top .facebook::before{
+    content: '';
+    display: inline-block;
+    width: 2.5rem;
+    height: 2.5rem;
+    background: url(https://www.starbucks.com.tw/objects/images/social-icons.png);
+    background-position: 0% 0%;
+    background-size: 100%;
+    margin-right: -.7rem;
+
+}
+footer .footer_top .instagram::before{
+    content: '';
+    display: inline-block;
+    width: 2.5rem;
+    height: 2.5rem;
+    background: url(https://www.starbucks.com.tw/objects/images/social-icons.png);
+    background-position: 5%;
+    background-size: 100%;
+
+}
+footer .footer_top .youtube::before{
+    content: '';
+    display: inline-block;
+    width: 2.5rem;
+    height: 2.5rem;
+    background: url(https://www.starbucks.com.tw/objects/images/social-icons.png);
+    background-position: 0% 100%;
+    background-size: 100%;
+}
+footer .footer_top a{
+    margin: auto 0;
+}
+footer .footer_top .line i{
+    font-size: 3rem;
+    color: #000000;
+}
+
+footer .footer_main a{
+    text-decoration: none;
+    color: #000000;
+}
+footer .footer_main{
+    display: flex;
+    background: url(https://www.starbucks.com.tw/objects/images/wordmark_footer.png);
+    background-repeat: no-repeat;
+    background-position: 95% 15%;
+}
+
+footer .footer_main .ul_wrap:last-child  ul:last-child li:last-child a{
+    color: #6A8A55;
+}
+footer .footer_main .ul_wrap .fa-angle-down{
+    display: none;
+    
+}
+footer .footer_main .ul_wrap{
+    margin: 1rem 3rem;
+}
+footer .footer_main .ul_wrap h4{
+    margin-bottom: 1rem;
+    font-size: 1.2rem;
+}
+footer .footer_main li{
+    list-style: none;
+    line-height: 2;
+}
+.footer_bottom div{
+    width: 90vw;
+    margin: auto;
+
+}
+.footer_bottom div p{
+    display: inline;
+}
+.footer_bottom div a{
+    text-decoration: none;
+    color: #000000;
+
+}
+.footer_bottom div a::after{
+    content: '│';
+    font-weight: 600;
+    margin: auto .5rem;
+}
+.rights{
+    width: 90vw;
+    margin: .5rem auto 0 auto;
+}
+
+/* black space */
+.black_space{
+    max-width: 100vw;
+    height: 10px;
+    background-color: #000000;
+}
+
+@media screen and (max-width:768px){
+    header{
+        justify-content: space-between;
+        align-items: flex-end;
+    }
+    header .utility_list ul:last-child{
+        margin-top: 13%;
+        margin-right: 10%
+    }
+    /* mobile nav */
+    .mobile_nav{
+        transform: translateY(-200%);
+        position: absolute;
+        z-index: 99;
+        width: 100vw;
+        background-color: #EDEEEE;
+        padding: 0.3rem 2rem 0.3rem 2rem;  
+    }
+    #menuCheck{
+        display: none;
+        z-index: -99999999999999;
+    }
+    @keyframes burgerMoveA {
+        0%{
+            top: 0%;
+        }
+
+        50%{
+            top: 50%;
+        }
+        100%{
+            top: 50%;
+            transform: rotate(45deg);
+        }
+    }
+    @keyframes burgerMoveB {
+        0%{
+            top: 50%;
+        }
+
+        50%{
+            opacity: .5;
+        }
+        100%{
+            opacity: 0;
+        }
+    }
+    @keyframes burgerMoveC {
+        0%{
+            top: 100%;
+        }
+
+        50%{
+            top: 50%;
+        }
+        100%{
+            top: 50%;
+            transform: rotate(-45deg);
+        }
+    }
+    .burger_icon{
+        display: block;
+    }
+    #menuCheck:checked~.burger_icon span:nth-child(1){
+        top: 50%;
+        transform: rotate(45deg);
+        transition: .3s linear;
+    }
+    
+    #menuCheck:checked~.burger_icon span:nth-child(2){
+        opacity: 0;
+        transition: .3s linear;
+
+    }
+    
+    #menuCheck:checked~.burger_icon span:nth-child(3){
+        top: 50%;
+        transform: rotate(-45deg);
+        transition: .3s linear;
+
+    }
+    #menuCheck:not(:checked)~.burger_icon span:nth-child(1){
+        transform: rotate(0deg);
+        top: 0%;
+        transition: .3s linear;
+    }
+    #menuCheck:not(:checked)~.burger_icon span:nth-child(2){
+        
+        opacity: 1;
+        top: 50%;
+        transition: .3s linear;
+    }
+    #menuCheck:not(:checked)~.burger_icon span:nth-child(3){
+        
+        transform:  rotate(0deg);
+        top: 100%;
+        transition: .3s linear;
+    }
+    .hide_menu{
+        display: block;
+        transform: translateY(0%);
+        transition: .3s linear;
+    }
+    .mobile_nav ul li{
+        list-style: none;
+    }
+    .mobile_nav ul{
+        border-bottom: 3px solid #E1E2E2;
+        padding-bottom: .5rem;
+    }
+    .mobile_nav a{
+        display: block;
+        font-size: 1.2rem;
+        text-decoration: none;
+        color: #000000;
+        margin: .6rem auto;
+        font-weight: 550;
+    }
+    .mobile_nav a:nth-child(2){
+        margin-top: 1rem;
+        color: #6D6E6E;
+    }
+    .mobile_nav a:nth-child(2)::before{
+        content: "";
+        display: inline-block;
+        width: 1.2rem;
+        height: 1.2rem;
+        background: url('https://www.starbucks.com.tw/objects/images/header_utility_list.svg');
+        background-position: 100% 100%;
+        background-size: 400%;
+        margin-right: .3rem;
+    }
+    
+    header nav{
+        display: none;
+    }
+
+    .utility_list ul li:nth-child(1){
+        display: none;
+    }
+    .utility_list ul li:nth-child(2){
+        display: none;
+    }
+    .locationForMobile{
+        position: absolute;
+        right: 3rem;
+        content: '';
+        display: inline-block;
+        width: 1.5rem;
+        height: 1.5rem;
+        background: url('https://www.starbucks.com.tw/objects/images/header_utility_list.svg');
+        background-position: 35% 100%;
+        background-size: 400%;
+
+    }
+    /* section content */
+    .advertisement{
+        position: fixed;
+        z-index: 200000;
+        right: 15px;
+    }
+    .advertisement img{
+        display: block;
+        width: 7rem;
+        border-radius: 15px;
+        box-shadow: 0 5px 10px 3px #3333331a;
+    }
+    
+    
+
+    .Brown_Sugar_Oatmilk_Iced_Shaken_Espresso{
+        right: 24%;
+    }
+    .Brown_Sugar_Cocoa_Oatmilk_Frappuccino_Blended_Beverage{
+        right: 5%;
+    }
+    .banner picture img{
+        display: block;
+        width: 100%;
+        margin: auto;
+    }
+    .banner .text_block img{
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+    .mobile-pay{
+        width: 100%;
+    }
+    .online-redeem .img_block img{
+        display: block;
+        width: 100%;
+        margin: auto;
+    }
+    .online-redeem .text_block img{
+        position: absolute;
+        top: 3%;
+    }
+
+    .openpoint_rewards{
+        width:  100vw;
+        margin: 3rem auto;
+    }
+
+    .reward{
+        width:  100vw;
+        height: 60vh;
+        margin: 3rem auto;
+        display: flex;
+    }
+    .star{
+        position: absolute;
+        top:2%;
+        right: 5%;
+    }
+    .reward .start_reward .img-block img{
+        display: block;
+        width: 70%;
+        margin: auto;
+    }
+
+    .start_reward{
+        width: 50%;
+        position:relative;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background-color: #1E3932;
+    }
+    .reward *{
+        color: #ffffff;
+        text-decoration: none;
+    }
+    .start_reward .text-block div{
+        text-align: center;
+        margin-top: 1rem;
+    }
+    .start_reward a{
+        display:inline-block;
+        border: 1px solid #ffffff;
+        border-radius: 20px;
+        padding: .5rem 1rem;
+        font-weight: 600;
+        margin: 0 1rem;
+    }
+    .start_reward h3{
+        font-size: 2.5rem;
+    }
+
+    .reward .goldreward img{
+        width: 100%;
+    }
+    .reward .goldreward{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 50%;
+        background-color: #00704A;
+    }
+    .reward .goldreward h3{
+        font-size: 2.5rem;
+        text-align: center;
+    }
+    .reward .goldreward p{
+        font-size: 1.3rem;
+        font-weight: 700;
+        margin-top: .5rem;
+    }
+    .reward .goldreward a{
+        display: inline-block;
+        border: 1px solid #ffffff;
+        padding: .5rem 1rem;
+        border-radius: 20px;
+        margin-top: 1rem;
+        text-align: center;
+    }
+    .reward .goldreward .text-block{
+        text-align: center;
+    }
+    .borrow_takeout{
+        width:  100vw;
+        display: block;
+        margin: 3rem auto;
+
+    }
+    .borrow,
+    .takeout{
+        width: 100%;
+    }
+    .borrow{
+        margin-right: 1rem;
+    }
+    .takeout{
+        margin: 3rem 0 3rem 0;
+    }
+    .borrow_takeout .img-block img{
+        display: block;
+        width: 100%;
+    }
+    .borrow_takeout .borrow .text-block{
+        background-color: #005E37;
+    }
+    .borrow_takeout .takeout .text-block{
+        background-color: #D4E9E2;
+    }
+    .borrow .text-block{
+        padding: 2rem;
+    }
+    .borrow,
+    .borrow .text-block *{
+        color: #ffffff;
+        text-decoration: none;
+        text-align: center;
+        line-height: 1.5;
+    }
+    .borrow .text-block h3{
+        font-size: 2.5rem;
+    }
+    .borrow .text-block p{
+        font-size: 1.5rem;
+        font-weight: 600;
+    }
+    .borrow .text-block a{
+        display: inline-block;
+        border: 1px solid #ffffff;
+        padding: .5rem 1rem;
+        border-radius: 20px;
+        margin-top: 1rem;
+        font-weight: 600;
+    }
+
+    .takeout .text-block{
+        padding: 2rem;
+    }
+    .takeout,
+    .takeout .text-block *{
+        color: #000000;
+        text-decoration: none;
+        text-align: center;
+        line-height: 1.5;
+    }
+    .takeout .text-block h3{
+        font-size: 2.5rem;
+    }
+    .takeout .text-block p{
+        font-size: 1.5rem;
+        font-weight: 600;
+    }
+    .takeout .text-block a{
+        display: inline-block;
+        border: 1px solid #000000;
+        padding: .5rem 1rem;
+        border-radius: 20px;
+        margin-top: 1rem;
+        font-weight: 700;
+    }
+    /* footer */
+    footer .footer_main{
+        display: block;
+        background: none;
+        background-repeat: no-repeat;
+        background-position: 95% 15%;
+    }
+    footer .footer_main .ul_wrap{
+        border-bottom: 1px solid #B3B3B3;
+    }
+    footer .footer_main .ul_wrap ul{
+        display: none;
+    }
+    footer .footer_main .ul_wrap{
+        position: relative;
+    }
+    footer .footer_main .ul_wrap .fa-angle-down{
+        position: absolute;
+        top: 15%;
+        right: 0;
+        
+    }
+    .on{
+        transform: rotate(180deg);
+        transition: .6s linear;
+    }
+    .ul_wrap input{
+        width: 100%;
+        position: absolute;
+    }
+}
+@media screen and (max-width:615px){
+    .Cocoa_Oatmilk_Macchiato{
+        left: 0;
+        bottom: 100px;
+    }
+    .Brown_Sugar_Oatmilk_Iced_Shaken_Espresso{
+        left: 0;
+    }
+    .Brown_Sugar_Cocoa_Oatmilk_Frappuccino_Blended_Beverage{
+        left: 0;
+
+    }
+}
