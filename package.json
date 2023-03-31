@@ -1,0 +1,22 @@
+{
+  "name": "starbucks",
+  "version": "1.0.0",
+  "description": "",
+  "main": "script.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/victorlovescoding/Starbucks-Clone.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/victorlovescoding/Starbucks-Clone/issues"
+  },
+  "homepage": "https://github.com/victorlovescoding/Starbucks-Clone#readme",
+  "devDependencies": {
+    "eslint": "^8.36.0"
+  }
+}

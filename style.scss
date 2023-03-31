@@ -1,0 +1,614 @@
+$blackColor: #000000;
+%contentDisplay {
+  content: "";
+  display: inline-block;
+}
+@mixin backgroundImage($backgroundPositionX: 0%, $backgroundPositionY: 0%) {
+  width: 2.5rem;
+  height: 2.5rem;
+  background: url(https://www.starbucks.com.tw/objects/images/social-icons.png);
+  background-position: $backgroundPositionX $backgroundPositionY;
+  background-size: 100%;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Noto Sans TC", "微軟正黑體", "Microsoft JhengHei",
+    "Apple LiGothic Medium", sans-serif, "FontAwesome";
+}
+.green_space {
+  max-width: 100vw;
+  height: 10px;
+  background-color: #006341;
+  z-index: 9999999767676769;
+}
+header {
+  z-index: 999999;
+  max-width: 100vw;
+  display: flex;
+  align-items: flex-end;
+  position: relative;
+  background-color: #f7f7f7;
+  .logo img {
+    width: 5rem;
+  }
+  .logo {
+    margin: 0.5rem;
+  }
+  nav ul li {
+    display: inline-block;
+  }
+  .utility_list ul {
+    position: absolute;
+    right: 0;
+    top: 0;
+    margin: 1rem;
+  }
+  .utility_list ul li {
+    display: inline-block;
+  }
+  .utility_list ul li {
+    margin: 0 1rem;
+  }
+  .utility_list ul li:nth-child(1)::before {
+    @extend %contentDisplay;
+    width: 1.5rem;
+    height: 1.5rem;
+    vertical-align: bottom;
+    background: url("https://www.starbucks.com.tw/objects/images/header_utility_list.svg");
+    background-position: 100% 0;
+    background-size: 400%;
+  }
+  .utility_list ul li:nth-child(2)::before {
+    @extend %contentDisplay;
+    width: 1.5rem;
+    height: 1.5rem;
+    vertical-align: bottom;
+    background: url("https://www.starbucks.com.tw/objects/images/header_utility_list.svg");
+    background-position: 35% 100%;
+    background-size: 400%;
+  }
+  .utility_list ul li a {
+    text-decoration: none;
+    color: $blackColor;
+    font-weight: 600;
+  }
+  .utility_list ul li {
+    list-style: none;
+  }
+}
+
+// 輪到手機尺寸才顯示
+.mobile_nav {
+  display: none;
+}
+
+/* 漢堡選單 */
+.burger_icon {
+  display: none;
+  position: relative;
+  width: 2rem;
+  height: 1.5rem;
+  margin-bottom: 20px;
+  margin-right: 0.5rem;
+  span {
+    position: absolute;
+    display: block;
+    width: 100%;
+    height: 1px;
+    background-color: #005e37;
+  }
+  span:nth-child(1) {
+    top: 0%;
+  }
+  span:nth-child(2) {
+    top: 50%;
+  }
+  span:nth-child(3) {
+    top: 100%;
+  }
+}
+nav ul li a {
+  text-decoration: none;
+  color: $blackColor;
+  font-weight: 600;
+  padding: 1rem;
+}
+nav ul {
+  margin-left: 3rem;
+  padding-bottom: 1rem;
+}
+.sub_menu {
+  z-index: 100;
+  width: 100vw;
+  display: flex;
+  justify-content: space-between;
+  display: none;
+  position: relative;
+  .menu_content_container {
+    width: 100vw;
+    background-color: #1e1e1e;
+    display: flex;
+    flex-wrap: wrap;
+    position: absolute;
+    .menu_content {
+      margin: 2.5rem;
+      ul li {
+        list-style: none;
+        font-size: 1.2rem;
+        margin: 0.5rem 0;
+      }
+      ul h3 a {
+        text-decoration: none;
+        color: #ffffff;
+      }
+      ul li a {
+        text-decoration: none;
+        color: #bcbcbc;
+      }
+      ul li:first-child {
+        font-weight: 700;
+      }
+    }
+  }
+}
+/* section content */
+.advertisement {
+  position: fixed;
+  z-index: 200000;
+  right: 3rem;
+  img {
+    display: block;
+    width: 7rem;
+    border-radius: 15px;
+    box-shadow: 0 5px 10px 3px #3333331a;
+  }
+}
+
+.banner {
+  position: relative;
+  margin: 3rem 0;
+  img {
+    display: block;
+    width: 85%;
+    margin: auto;
+  }
+  .text_block img {
+    position: absolute;
+    top: 0;
+    left: 7%;
+  }
+}
+
+.mobile-pay {
+  width: 85%;
+  margin: auto;
+  position: relative;
+  .img_block img {
+    width: 100%;
+  }
+  .text_block img {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+  a {
+    display: block;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+}
+.openpoint_rewards {
+  width: 85%;
+  margin: 3rem auto;
+}
+.online-redeem {
+  position: relative;
+  .img_block img {
+    display: block;
+    width: 85%;
+    margin: auto;
+  }
+  .text_block img {
+    position: absolute;
+    top: 10%;
+  }
+  a {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+  }
+}
+.borrow_takeout {
+  width: 85vw;
+  display: flex;
+  margin: 3rem auto;
+  .borrow {
+    width: 50%;
+    margin-right: 1rem;
+    color: #ffffff;
+    text-decoration: none;
+    text-align: center;
+    line-height: 1.5;
+    .text-block {
+      background-color: #005e37;
+      padding: 2rem;
+    }
+    .text-block * {
+      color: #ffffff;
+      text-decoration: none;
+      text-align: center;
+      line-height: 1.5;
+    }
+    .text-block h3 {
+      font-size: 2.5rem;
+    }
+    .text-block p {
+      font-size: 1.5rem;
+      font-weight: 600;
+    }
+    .text-block a {
+      display: inline-block;
+      border: 1px solid #ffffff;
+      padding: 0.5rem 1rem;
+      border-radius: 20px;
+      margin-top: 1rem;
+      font-weight: 600;
+    }
+  }
+  .takeout {
+    width: 50%;
+    margin-left: 1rem;
+    color: $blackColor;
+    text-decoration: none;
+    text-align: center;
+    line-height: 1.5;
+    .text-block {
+      background-color: #d4e9e2;
+      padding: 2rem;
+    }
+    .text-block * {
+      color: $blackColor;
+      text-decoration: none;
+      text-align: center;
+      line-height: 1.5;
+    }
+    .text-block h3 {
+      font-size: 2.5rem;
+    }
+    .text-block p {
+      font-size: 1.5rem;
+      font-weight: 600;
+    }
+    .text-block a {
+      display: inline-block;
+      border: 1px solid $blackColor;
+      padding: 0.5rem 1rem;
+      border-radius: 20px;
+      margin-top: 1rem;
+      font-weight: 700;
+    }
+  }
+  .img-block img {
+    display: block;
+    width: 100%;
+  }
+}
+
+/* footer */
+footer {
+  background-color: #f0f0f0;
+  padding-bottom: 1rem;
+  .footer_top {
+    padding: 1rem 0 1rem 5rem;
+    border-bottom: 3px solid #ffffff;
+  }
+  .footer_top .facebook::before {
+    @extend %contentDisplay;
+    @include backgroundImage(0%, 0%);
+    margin-right: -0.7rem;
+  }
+  .footer_top .instagram::before {
+    @extend %contentDisplay;
+    width: 2.5rem;
+    height: 2.5rem;
+    @include backgroundImage(0%, 50%);
+  }
+  .footer_top .youtube::before {
+    @extend %contentDisplay;
+    @include backgroundImage(0%, 100%);
+  }
+  .footer_top a {
+    margin: auto 0;
+  }
+  .footer_top .line i {
+    font-size: 3rem;
+    color: $blackColor;
+  }
+  .footer_main a {
+    text-decoration: none;
+    color: $blackColor;
+  }
+  .footer_main {
+    display: flex;
+    background: url(https://www.starbucks.com.tw/objects/images/wordmark_footer.png);
+    background-repeat: no-repeat;
+    background-position: 95% 15%;
+    .ul_wrap:last-child ul:last-child li:last-child a {
+      color: #6a8a55;
+    }
+    .ul_wrap .fa-angle-down {
+      display: none;
+    }
+    .ul_wrap {
+      margin: 1rem 3rem;
+    }
+    .ul_wrap h4 {
+      margin-bottom: 1rem;
+      font-size: 1.2rem;
+    }
+    li {
+      list-style: none;
+      line-height: 2;
+    }
+  }
+  .footer_bottom {
+    div {
+      width: 90vw;
+      margin: auto;
+      p {
+        display: inline;
+      }
+      a {
+        text-decoration: none;
+        color: $blackColor;
+      }
+      a::after {
+        content: "│";
+        font-weight: 600;
+        margin: auto 0.5rem;
+      }
+    }
+    .rights {
+      width: 90vw;
+      margin: 0.5rem auto 0 auto;
+    }
+  }
+}
+
+.black_space {
+  max-width: 100vw;
+  height: 10px;
+  background-color: $blackColor;
+}
+
+@media screen and (max-width: 768px) {
+  header {
+    justify-content: space-between;
+    align-items: flex-end;
+    nav {
+      display: none;
+    }
+    ul {
+      li:nth-child(1) {
+        display: none;
+      }
+      li:nth-child(2) {
+        display: none;
+      }
+    }
+    .burger_icon {
+      display: block;
+      .locationForMobile {
+        position: absolute;
+        right: 3rem;
+        content: "";
+        display: inline-block;
+        width: 1.5rem;
+        height: 1.5rem;
+        background: url("https://www.starbucks.com.tw/objects/images/header_utility_list.svg");
+        background-position: 35% 100%;
+        background-size: 400%;
+      }
+    }
+  }
+
+  /* mobile nav */
+  .mobile_nav {
+    transform: translateY(-200%);
+    position: absolute;
+    z-index: 99;
+    width: 100vw;
+    background-color: #edeeee;
+    padding: 0.3rem 2rem 0.3rem 2rem;
+  }
+
+  .hide_menu {
+    display: block;
+    transform: translateY(0%);
+    transition: 0.3s linear;
+  }
+  .mobile_nav {
+    ul {
+      border-bottom: 3px solid #e1e2e2;
+      padding-bottom: 0.5rem;
+      li {
+        list-style: none;
+      }
+    }
+    a {
+      display: block;
+      font-size: 1.2rem;
+      text-decoration: none;
+      color: $blackColor;
+      margin: 0.6rem auto;
+      font-weight: 550;
+    }
+    a:nth-child(2) {
+      margin-top: 1rem;
+      color: #6d6e6e;
+    }
+    a:nth-child(2)::before {
+      content: "";
+      display: inline-block;
+      width: 11.5rem;
+      height: 11.5rem;
+      background: url("https://www.starbucks.com.tw/objects/images/header_utility_list.svg");
+      background-position: 100% 100%;
+      background-size: 400%;
+      margin-right: 0.3rem;
+    }
+  }
+
+  /* section content */
+
+  .advertisement {
+    position: fixed;
+    z-index: 200000;
+    right: 1.5rem;
+    img {
+      display: block;
+      width: 5rem;
+      border-radius: 15px;
+      box-shadow: 0 5px 10px 3px #3333331a;
+    }
+  }
+
+  .banner {
+    picture img {
+      display: block;
+      width: 100vw;
+      margin: 0;
+    }
+    .text_block img {
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+  }
+  .mobile-pay {
+    width: 100%;
+  }
+  .openpoint_rewards {
+    width: 100vw;
+    margin: 3rem auto;
+  }
+  .online-redeem {
+    .text_block img {
+      position: absolute;
+      top: 3%;
+    }
+    .img_block img {
+      display: block;
+      margin: 0;
+      width: 100%;
+    }
+  }
+  .borrow_takeout {
+    width: 100vw;
+    display: block;
+    margin: 3rem auto;
+    .borrow {
+      margin-right: 1rem;
+      width: 100%;
+      color: #ffffff;
+      text-decoration: none;
+      text-align: center;
+      line-height: 1.5;
+      .text-block {
+        background-color: #005e37;
+        padding: 2rem;
+        h3 {
+          font-size: 2.5rem;
+        }
+        p {
+          font-size: 1.5rem;
+          font-weight: 600;
+        }
+        a {
+          display: inline-block;
+          border: 1px solid #ffffff;
+          padding: 0.5rem 1rem;
+          border-radius: 20px;
+          margin-top: 1rem;
+          font-weight: 600;
+        }
+      }
+      .text-block * {
+        color: #ffffff;
+        text-decoration: none;
+        text-align: center;
+        line-height: 1.5;
+      }
+    }
+    .takeout {
+      width: 100%;
+      margin: 3rem 0 3rem 0;
+      color: $blackColor;
+      text-decoration: none;
+      text-align: center;
+      line-height: 1.5;
+      .text-block {
+        background-color: #d4e9e2;
+        padding: 2rem;
+      }
+      .text-block * {
+        color: $blackColor;
+        text-decoration: none;
+        text-align: center;
+        line-height: 1.5;
+      }
+      .text-block h3 {
+        font-size: 2.5rem;
+      }
+      .text-block p {
+        font-size: 1.5rem;
+        font-weight: 600;
+      }
+      .text-block a {
+        display: inline-block;
+        border: 1px solid $blackColor;
+        padding: 0.5rem 1rem;
+        border-radius: 20px;
+        margin-top: 1rem;
+        font-weight: 700;
+      }
+    }
+    .img-block img {
+      display: block;
+      width: 100%;
+    }
+  }
+  /* footer */
+  footer {
+    .footer_main {
+      display: block;
+      background: none;
+      background-repeat: no-repeat;
+      background-position: 95% 15%;
+      .ul_wrap {
+        border-bottom: 1px solid #b3b3b3;
+        position: relative;
+        ul {
+          display: none;
+        }
+        .fa-angle-down {
+          position: absolute;
+          top: 15%;
+          right: 0;
+        }
+        input {
+          width: 100%;
+          position: absolute;
+        }
+      }
+    }
+  }
+}
