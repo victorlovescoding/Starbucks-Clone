@@ -178,7 +178,7 @@ nav ul {
     position: absolute;
     top: 0;
     left: 7%;
-  } 
+  }
 }
 
 .mobile-pay {
@@ -433,14 +433,6 @@ footer {
     width: 100vw;
     background-color: #edeeee;
     padding: 0.3rem 2rem 0.3rem 2rem;
-  }
-
-  .hide_menu {
-    display: block;
-    transform: translateY(0%);
-    transition: 0.3s linear;
-  }
-  .mobile_nav {
     ul {
       border-bottom: 3px solid #e1e2e2;
       padding-bottom: 0.5rem;
@@ -463,8 +455,8 @@ footer {
     a:nth-child(2)::before {
       content: "";
       display: inline-block;
-      width: 11.5rem;
-      height: 11.5rem;
+      width: 1.5rem;
+      height: 1.5rem;
       background: url("https://www.starbucks.com.tw/objects/images/header_utility_list.svg");
       background-position: 100% 100%;
       background-size: 400%;
@@ -472,8 +464,13 @@ footer {
     }
   }
 
-  /* section content */
+  .hide_menu {
+    display: block;
+    transform: translateY(0%);
+    transition: 0.3s linear;
+  }
 
+  /* section content */
   .advertisement {
     position: fixed;
     z-index: 200000;

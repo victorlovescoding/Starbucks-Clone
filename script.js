@@ -4,27 +4,25 @@ const footers=Array.from(document.querySelectorAll(".footer_main .ul_wrap ul"));
 const ul_wraps=Array.from(document.querySelectorAll(".ul_wrap"));
 const burgerIcon=document.querySelector(".burger_icon");
 const mobileNav=document.querySelector(".mobile_nav");
-
+// 漢堡選單控制表單的CSS來顯示或隱藏表單
 burgerIcon.addEventListener("click",()=>{
 	mobileNav.classList.toggle("hide_menu");
 });
+// 螢幕低於768px，點開Footer選單顯示細項
 if(window.innerWidth < "768"){
 	ul_wraps.forEach((ul_wrap)=>{
 		let index=ul_wraps.indexOf(ul_wrap);
 		ul_wrap.addEventListener("click",()=>{
-			//footers[index].style.display='block'
 			if(footers[index].style.display=="none"){
-				footers[index].style.display="block";
-                
+				footers[index].style.display="block";       
 			}else{
 				footers[index].style.display="none";
-                
 			}
 		});
 	});
 }
 
-
+// 滑鼠移到哪個選單，就跑出相對應的選單細項
 navs.forEach((nav)=>{
 	let index=navs.indexOf(nav);
 	nav.addEventListener("mouseover",()=>{
@@ -48,10 +46,4 @@ navs.forEach((nav)=>{
 			subMenus[index].style.display="none";
 		});  
 	});
-    
-       
-});
-
-window.addEventListener("scroll",()=>{
-	console.log(window.scrollY);
 });
