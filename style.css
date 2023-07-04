@@ -219,8 +219,6 @@ nav ul {
   top: 10%;
 }
 .online-redeem a {
-  width: 100%;
-  height: 100%;
   position: absolute;
   top: 0;
 }
@@ -307,6 +305,8 @@ footer {
   padding-bottom: 1rem;
 }
 footer .footer_top {
+  max-width: 1320px;
+  margin: 0 auto;
   padding: 1rem 0 1rem 5rem;
   border-bottom: 3px solid #ffffff;
 }
@@ -346,6 +346,8 @@ footer .footer_main a {
   color: #000000;
 }
 footer .footer_main {
+  max-width: 1320px;
+  margin: 0 auto;
   display: flex;
   background: url(https://www.starbucks.com.tw/objects/images/wordmark_footer.png);
   background-repeat: no-repeat;
@@ -367,6 +369,11 @@ footer .footer_main .ul_wrap h4 {
 footer .footer_main li {
   list-style: none;
   line-height: 2;
+}
+footer .footer_bottom {
+  max-width: 1320px;
+  margin: 0 auto;
+  overflow-x: hidden;
 }
 footer .footer_bottom div {
   width: 90vw;
@@ -459,8 +466,8 @@ footer .footer_bottom .rights {
   .mobile_nav a:nth-child(2)::before {
     content: "";
     display: inline-block;
-    width: 1.5rem;
-    height: 1.5rem;
+    width: 11.5rem;
+    height: 11.5rem;
     background: url("https://www.starbucks.com.tw/objects/images/header_utility_list.svg");
     background-position: 100% 100%;
     background-size: 400%;
